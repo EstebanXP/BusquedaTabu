@@ -2,7 +2,7 @@ def getHijos(edo ,proble):
     return proble[edo]
 
 def siguiente(lEdos ,lTabu ,hs):
-    hmejor =1000
+    hmejor=1000
     mejor=' '
     listo=False
     indi=0
@@ -24,7 +24,7 @@ def tabu(actual ,lTabu ,proble ,hs):
     print(actual)
     hactual=hs[actual]
     hijos=getHijos(actual ,proble)
-    nuevo ,hnuevo=siguiente(hijos ,lTabu ,hs)
+    nuevo,hnuevo=siguiente(hijos ,lTabu ,hs)
     if hactual <hnuevo:
         soln=actual
     else:
@@ -49,12 +49,10 @@ def main():
         'M':['I','L','N','O'],
         'N':['I','M','Ñ','O'],
         'Ñ':['J','N'],
-        'O':['L','M','N']
-    }
+        'O':['L','M','N']}
     hs={'A':10,'B':11,'C':10.5,'D':10.25,'E':8,'F':12,'G':9,
-    'H':7.5,'I':10,'J':12.25,'K':12,'L':9,'M':7,'N':10,'Ñ':11,
-    'O':8.5
-    }
+        'H':7.5,'I':10,'J':12.25,'K':12,'L':9,'M':7,'N':10,'Ñ':11,
+        'O':8.5}
     inicial=input("Dame el nodo de inicio: ")
     soln=tabu(inicial,[],proble ,hs)
     print('SOLUCION ENCONTRADA:'+soln)
