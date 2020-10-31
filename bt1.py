@@ -33,11 +33,6 @@ def tabu(actual ,lTabu ,proble ,hs):
     return soln
 
 def main():
-    """
-    proble={'A':['B','C','D'],'B':['A','C','E'],'C':['A','B','D','E'],
-    'D':['A','C','F'],'E':['B','C','F'],'F':['D','E']}
-    hs={'A':45,'B':40,'C':35,'D':37,'E':23,'F':15}
-    """
     proble={
         'A':['B','C','D','E','F'],
         'B':['A','C'],
